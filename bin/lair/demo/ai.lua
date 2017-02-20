@@ -11,6 +11,7 @@ function default()
         elseif self_turn.p < 60 then
                 decide_behave = step_right()
         end
+        sleep(1)
         print("default ai cycle test")
         print("vision field length = " .. vision_length.l .. ": " .. get_vision_length())
         print("turning " .. self_turn.p)

@@ -1,3 +1,9 @@
+require "os"
+
+function sleep(s)
+        local ntime = os.clock() + s
+        repeat until os.clock() > ntime
+end
 
 function table_length(T)
         local count = 0
