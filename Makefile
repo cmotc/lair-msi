@@ -3,7 +3,7 @@ windows:
 	make win32
 
 win64:
-	${HOME}/node_modules/.bin/msi-packager \
+	nodejs ${HOME}/node_modules/.bin/msi-packager \
 		${HOME}/Projects/lair-msi/bin \
 		${HOME}/Projects/lair-msi/lair-x64.msi \
 		-n LAIR \
@@ -16,7 +16,7 @@ win64:
 		-l
 
 win32:
-	${HOME}/node_modules/.bin/msi-packager \
+	nodejs ${HOME}/node_modules/.bin/msi-packager \
 		${HOME}/Projects/lair-msi/bin \
 		${HOME}/Projects/lair-msi/lair-x86.msi \
 		-n LAIR \
