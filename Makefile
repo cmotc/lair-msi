@@ -4,15 +4,15 @@ windows:
 
 win64:
 	nodejs ${HOME}/node_modules/.bin/msi-packager \
-		${HOME}/lair-manifest/Projects/lair-msi/bin \
-		${HOME}/lair-manifest/Projects/lair-msi/lair-x64.msi \
+		${HOME}/Projects/lair-manifest/lair-msi/bin \
+		${HOME}/Projects/lair-manifest/lair-msi/lair-x64.msi \
 		-n LAIR \
 		-v .9 \
 		-m lair \
 		-a x64 \
 		-u 5D2652D8-DF11-11E6-A08B-0026B9C08CE9 \
 		-e ./lair-x64.exe \
-		-i ${HOME}/Projects/lair-msi/location_generic.ico \
+		-i ${HOME}/Projects/lair-manifest/lair-msi/location_generic.ico \
 		-l
 
 win32:
@@ -25,5 +25,5 @@ win32:
 		-a x86 \
 		-u 5D2652D8-DF11-11E6-A08B-0026B9C08CE9 \
 		-e ./lair-x86.exe \
-		 -i ${HOME}/lair-manifest/Projects/lair-msi/location_generic.ico \
+		 -i ${HOME}/Projects/lair-manifest/lair-msi/location_generic.ico \
 		-l
