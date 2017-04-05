@@ -11,6 +11,31 @@ function table_length(T)
         return count
 end
 
+function print_seen_details()
+        local r = false
+        print("Printing details about nearby entities:")
+        print("---------------------------------------")
+        for key, value in pairs(vision) do
+                print("  * " .. value .. " was found at key: " .. key)
+        end
+        print("")
+        return r
+end
+
+function print_self_details()
+        local r = false
+        print("Printing details about self:")
+        print("----------------------------")
+        for key, value in pairs(self) do
+                print("  * " .. value .. " was found at key: " .. key)
+        end
+        for key, value in pairs(self_speed) do
+                print("  * " .. value .. " was found at key: " .. key)
+        end
+        print("")
+        return r
+end
+
 function check_right_for_detail(query)
         local r = false
         for key, value in pairs(vision) do
@@ -103,4 +128,8 @@ end
 
 function step_east()
         return "step_right()"
+end
+
+function stand_still()
+        return "stand_still()"
 end
